@@ -10,7 +10,6 @@
 ##########################
 
 ip4=$(hostname -I)
-$ip4=$ip4
 echo "Votre IP : ${ip4// /}"
 
 sed -i "s/127\.0\.0\.1/0\.0\.0\.0/g; s/localhost/${ip4// /}/g; s/headless: false/headless: true/;" ./UIconfig.js
